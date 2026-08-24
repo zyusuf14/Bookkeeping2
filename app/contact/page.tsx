@@ -7,13 +7,13 @@ export default function ContactPage() {
       <Header />
 
       {/* HERO */}
-      <section className="mt-[88px] bg-[#F7FAFC] px-5 py-20 md:mt-[105px] md:px-10 md:py-28 lg:px-16">
+      <section className="mt-[88px] bg-[#FAF8FC] px-5 py-20 md:mt-[105px] md:px-10 md:py-28 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
             Contact Us
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] text-[#123B5D] md:text-7xl">
+          <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] text-[#4B286D] md:text-7xl">
             Let&apos;s talk about your finances.
           </h1>
 
@@ -28,11 +28,11 @@ export default function ContactPage() {
   <div className="mx-auto max-w-7xl">
 
     <div className="mb-12">
-      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
+      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
         Our Plans
       </p>
 
-      <h2 className="max-w-3xl text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-6xl">
+      <h2 className="max-w-3xl text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-6xl">
         Choose the level of support that suits you.
       </h2>
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
     <div className="grid gap-6 lg:grid-cols-3">
 
       {/* BASIC */}
-      <div className="flex flex-col rounded-[28px] border border-[#DCE7EE] bg-white p-7 md:p-8">
+      <div className="flex flex-col rounded-[28px] border border-[#E9DFEE] bg-white p-7 md:p-8">
 
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7780]">
           Basic
@@ -54,7 +54,7 @@ export default function ContactPage() {
         <div className="mt-7 flex items-end gap-2">
           <span className="mb-2 text-2xl text-[#6B7780]">£</span>
 
-          <span className="text-6xl font-semibold tracking-[-0.05em] text-[#123B5D]">
+          <span className="text-6xl font-semibold tracking-[-0.05em] text-[#4B286D]">
             2.99
           </span>
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
         </p>
 
         <div className="mt-8 border-t border-slate-200 pt-6">
-          <p className="mb-5 text-sm font-semibold text-[#123B5D]">
+          <p className="mb-5 text-sm font-semibold text-[#4B286D]">
             Includes
           </p>
 
@@ -82,7 +82,7 @@ export default function ContactPage() {
 
         <a
           href="#contact-form"
-          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#123B5D]"
+          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#4B286D]"
         >
           Enquire below
           <span>↓</span>
@@ -90,9 +90,9 @@ export default function ContactPage() {
       </div>
 
       {/* STANDARD */}
-      <div className="relative flex flex-col rounded-[28px] border-2 border-[#4F8EB8] bg-[#F7FAFC] p-7 md:p-8">
+      <div className="relative flex flex-col rounded-[28px] border-2 border-[#70459A] bg-[#FAF8FC] p-7 md:p-8">
 
-        <span className="absolute right-6 top-6 rounded-full bg-[#DCECF5] px-4 py-2 text-xs font-semibold text-[#123B5D]">
+        <span className="absolute right-6 top-6 rounded-full bg-[#DCECF5] px-4 py-2 text-xs font-semibold text-[#4B286D]">
           Popular
         </span>
 
@@ -103,7 +103,7 @@ export default function ContactPage() {
         <div className="mt-7 flex items-end gap-2">
           <span className="mb-2 text-2xl text-[#6B7780]">£</span>
 
-          <span className="text-6xl font-semibold tracking-[-0.05em] text-[#123B5D]">
+          <span className="text-6xl font-semibold tracking-[-0.05em] text-[#4B286D]">
             4.99
           </span>
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
         </p>
 
         <div className="mt-8 border-t border-slate-200 pt-6">
-          <p className="mb-5 text-sm font-semibold text-[#123B5D]">
+          <p className="mb-5 text-sm font-semibold text-[#4B286D]">
             Includes
           </p>
 
@@ -132,7 +132,7 @@ export default function ContactPage() {
 
         <a
           href="#contact-form"
-          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#123B5D]"
+          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#4B286D]"
         >
           Enquire below
           <span>↓</span>
@@ -140,7 +140,7 @@ export default function ContactPage() {
       </div>
 
       {/* PREMIUM */}
-      <div className="flex flex-col rounded-[28px] border border-[#DCE7EE] bg-white p-7 md:p-8">
+      <div className="flex flex-col rounded-[28px] border border-[#E9DFEE] bg-white p-7 md:p-8">
 
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7780]">
           Premium
@@ -149,7 +149,7 @@ export default function ContactPage() {
         <div className="mt-7 flex items-end gap-2">
           <span className="mb-2 text-2xl text-[#6B7780]">£</span>
 
-          <span className="text-6xl font-semibold tracking-[-0.05em] text-[#123B5D]">
+          <span className="text-6xl font-semibold tracking-[-0.05em] text-[#4B286D]">
             12.99
           </span>
 
@@ -164,7 +164,7 @@ export default function ContactPage() {
         </p>
 
         <div className="mt-8 border-t border-slate-200 pt-6">
-          <p className="mb-5 text-sm font-semibold text-[#123B5D]">
+          <p className="mb-5 text-sm font-semibold text-[#4B286D]">
             Includes
           </p>
 
@@ -179,7 +179,7 @@ export default function ContactPage() {
 
         <a
           href="#contact-form"
-          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#123B5D]"
+          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#4B286D]"
         >
           Enquire below
           <span>↓</span>
@@ -198,11 +198,11 @@ export default function ContactPage() {
 
           {/* DETAILS */}
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
               Get in touch
             </p>
 
-            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-5xl">
+            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-5xl">
               We&apos;re here to help.
             </h2>
 
@@ -218,7 +218,7 @@ export default function ContactPage() {
 
               <a
                 href="mailto:info@thebookkeepingcorporation.com"
-                className="mt-3 block break-all text-lg font-semibold text-[#123B5D] transition-colors hover:text-[#4F8EB8]"
+                className="mt-3 block break-all text-lg font-semibold text-[#4B286D] transition-colors hover:text-[#70459A]"
               >
                 info@thebookkeepingcorporation.com
               </a>

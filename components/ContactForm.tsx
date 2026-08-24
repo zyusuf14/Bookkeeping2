@@ -46,13 +46,13 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="rounded-[28px] bg-[#F4F8FB] p-6 md:p-10 lg:p-12">
+    <div className="rounded-[28px] bg-[#F8F5FA] p-6 md:p-10 lg:p-12">
       <form onSubmit={handleSubmit} className="grid gap-6">
         {/* NAME */}
         <div>
           <label
             htmlFor="name"
-            className="mb-2 block text-sm font-semibold text-[#123B5D]"
+            className="mb-2 block text-sm font-semibold text-[#4B286D]"
           >
             Name
           </label>
@@ -62,7 +62,7 @@ export default function ContactForm() {
             name="name"
             type="text"
             required
-            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#4F8EB8]"
+            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#70459A]"
             placeholder="Your name"
           />
         </div>
@@ -71,7 +71,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="mb-2 block text-sm font-semibold text-[#123B5D]"
+            className="mb-2 block text-sm font-semibold text-[#4B286D]"
           >
             Email
           </label>
@@ -81,7 +81,7 @@ export default function ContactForm() {
             name="email"
             type="email"
             required
-            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#4F8EB8]"
+            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#70459A]"
             placeholder="you@example.com"
           />
         </div>
@@ -90,7 +90,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="phone"
-            className="mb-2 block text-sm font-semibold text-[#123B5D]"
+            className="mb-2 block text-sm font-semibold text-[#4B286D]"
           >
             Phone
             <span className="ml-2 font-normal text-slate-400">
@@ -102,7 +102,7 @@ export default function ContactForm() {
             id="phone"
             name="phone"
             type="tel"
-            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#4F8EB8]"
+            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#70459A]"
             placeholder="Your phone number"
           />
         </div>
@@ -111,7 +111,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="plan"
-            className="mb-2 block text-sm font-semibold text-[#123B5D]"
+            className="mb-2 block text-sm font-semibold text-[#4B286D]"
           >
             Select a plan
             <span className="ml-2 font-normal text-slate-400">
@@ -123,7 +123,7 @@ export default function ContactForm() {
             id="plan"
             name="plan"
             defaultValue=""
-            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#4F8EB8]"
+            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#70459A]"
           >
             <option value="">No plan selected</option>
             <option value="Basic — £2.99 / month">
@@ -142,7 +142,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="service"
-            className="mb-2 block text-sm font-semibold text-[#123B5D]"
+            className="mb-2 block text-sm font-semibold text-[#4B286D]"
           >
             What can we help with?
           </label>
@@ -151,7 +151,7 @@ export default function ContactForm() {
             id="service"
             name="service"
             defaultValue=""
-            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#4F8EB8]"
+            className="w-full rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#70459A]"
           >
             <option value="">Select a service</option>
             <option>Annual Accounts</option>
@@ -168,7 +168,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="mb-2 block text-sm font-semibold text-[#123B5D]"
+            className="mb-2 block text-sm font-semibold text-[#4B286D]"
           >
             Message
           </label>
@@ -178,7 +178,7 @@ export default function ContactForm() {
             name="message"
             required
             rows={6}
-            className="w-full resize-none rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#4F8EB8]"
+            className="w-full resize-none rounded-xl border border-[#D4E1E9] bg-white px-4 py-4 text-base outline-none transition focus:border-[#70459A]"
             placeholder="Tell us how we can help..."
           />
         </div>
@@ -187,7 +187,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="mt-2 inline-flex w-full items-center justify-center gap-3 rounded-xl bg-[#123B5D] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#245E86] disabled:cursor-not-allowed disabled:opacity-60 md:w-fit"
+          className="mt-2 inline-flex w-full items-center justify-center gap-3 rounded-xl bg-[#4B286D] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#245E86] disabled:cursor-not-allowed disabled:opacity-60 md:w-fit"
         >
           {status === "sending" ? "Sending..." : "Send enquiry"}
           {status !== "sending" && <span>→</span>}

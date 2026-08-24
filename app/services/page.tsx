@@ -7,13 +7,13 @@ export default function ServicesPage() {
       <Header />
 
       {/* HERO */}
-      <section className="mt-[88px] bg-[#F7FAFC] px-5 py-20 md:mt-[105px] md:px-10 md:py-28 lg:px-16">
+      <section className="mt-[88px] bg-[#FAF8FC] px-5 py-20 md:mt-[105px] md:px-10 md:py-28 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
             Our Services
           </p>
 
-          <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] text-[#123B5D] md:text-7xl">
+          <h1 className="max-w-5xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] text-[#4B286D] md:text-7xl">
             Financial support built around your needs.
           </h1>
 
@@ -47,9 +47,9 @@ export default function ServicesPage() {
         >
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.55fr_1.45fr] md:gap-20">
             <div>
-              <p className="text-sm font-semibold text-[#4F8EB8]">01</p>
+              <p className="text-sm font-semibold text-[#70459A]">01</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-5xl">
                 Annual Accounts
               </h2>
             </div>
@@ -82,13 +82,13 @@ export default function ServicesPage() {
       <Reveal>
         <section
           id="payroll"
-          className="scroll-mt-32 bg-[#F7FAFC] px-5 py-20 md:px-10 md:py-28 lg:px-16"
+          className="scroll-mt-32 bg-[#FAF8FC] px-5 py-20 md:px-10 md:py-28 lg:px-16"
         >
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.55fr_1.45fr] md:gap-20">
             <div>
-              <p className="text-sm font-semibold text-[#5D98BF]">02</p>
+              <p className="text-sm font-semibold text-[#7950A0]">02</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-5xl">
                 Payroll
               </h2>
             </div>
@@ -111,7 +111,7 @@ export default function ServicesPage() {
                 ].map((item) => (
                   <div
                     key={item}
-                    className="border-t border-[#C7DCE8] pt-4 text-sm font-medium text-[#53616B]"
+                    className="border-t border-[#DACBE4] pt-4 text-sm font-medium text-[#53616B]"
                   >
                     {item}
                   </div>
@@ -135,9 +135,9 @@ export default function ServicesPage() {
         >
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.55fr_1.45fr] md:gap-20">
             <div>
-              <p className="text-sm font-semibold text-[#6CA4C8]">03</p>
+              <p className="text-sm font-semibold text-[#825AA6]">03</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-5xl">
                 HMRC Enquiries
               </h2>
             </div>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
 
               <div className="mt-8 space-y-5">
                 <div>
-                  <h3 className="font-semibold text-[#123B5D]">
+                  <h3 className="font-semibold text-[#4B286D]">
                     Self Assessment
                   </h3>
                   <p className="mt-2 leading-7 text-[#66737C]">
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-[#123B5D]">VAT</h3>
+                  <h3 className="font-semibold text-[#4B286D]">VAT</h3>
                   <p className="mt-2 leading-7 text-[#66737C]">
                     Assistance with VAT registration, compliance checks, audits
                     and resolving discrepancies or disputes.
@@ -169,7 +169,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div>
-                  <h3 className="font-semibold text-[#123B5D]">
+                  <h3 className="font-semibold text-[#4B286D]">
                     Company Accounts
                   </h3>
                   <p className="mt-2 leading-7 text-[#66737C]">
@@ -187,13 +187,13 @@ export default function ServicesPage() {
       <Reveal>
         <section
           id="tax-planning"
-          className="scroll-mt-32 bg-[#F7FAFC] px-5 py-20 md:px-10 md:py-28 lg:px-16"
+          className="scroll-mt-32 bg-[#FAF8FC] px-5 py-20 md:px-10 md:py-28 lg:px-16"
         >
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.55fr_1.45fr] md:gap-20">
             <div>
-              <p className="text-sm font-semibold text-[#7DAFD0]">04</p>
+              <p className="text-sm font-semibold text-[#8C64AC]">04</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-5xl">
                 Tax Advice & Planning
               </h2>
             </div>
@@ -218,7 +218,7 @@ export default function ServicesPage() {
                     direction={index % 2 === 0 ? "left" : "right"}
                   >
                     <div className="h-full rounded-2xl border border-[#DCE8EF] bg-white p-5">
-                      <h3 className="font-semibold text-[#123B5D]">
+                      <h3 className="font-semibold text-[#4B286D]">
                         {item}
                       </h3>
                     </div>
@@ -238,9 +238,9 @@ export default function ServicesPage() {
         >
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.55fr_1.45fr] md:gap-20">
             <div>
-              <p className="text-sm font-semibold text-[#91BCD8]">05</p>
+              <p className="text-sm font-semibold text-[#A17FBC]">05</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-5xl">
                 Bookkeeping
               </h2>
             </div>
@@ -255,8 +255,8 @@ export default function ServicesPage() {
               <div className="mt-8 grid gap-6 md:grid-cols-2">
                 {/* ONSITE — LEFT */}
                 <Reveal direction="left">
-                  <div className="h-full rounded-2xl bg-[#F4F8FB] p-6">
-                    <h3 className="text-xl font-semibold text-[#123B5D]">
+                  <div className="h-full rounded-2xl bg-[#F8F5FA] p-6">
+                    <h3 className="text-xl font-semibold text-[#4B286D]">
                       Onsite Bookkeeping
                     </h3>
 
@@ -270,8 +270,8 @@ export default function ServicesPage() {
 
                 {/* OFFSITE — RIGHT */}
                 <Reveal direction="right">
-                  <div className="h-full rounded-2xl bg-[#F4F8FB] p-6">
-                    <h3 className="text-xl font-semibold text-[#123B5D]">
+                  <div className="h-full rounded-2xl bg-[#F8F5FA] p-6">
+                    <h3 className="text-xl font-semibold text-[#4B286D]">
                       Offsite Bookkeeping
                     </h3>
 
@@ -297,13 +297,13 @@ export default function ServicesPage() {
       <Reveal>
         <section
           id="cloud-accounting"
-          className="scroll-mt-32 bg-[#F7FAFC] px-5 py-20 md:px-10 md:py-28 lg:px-16"
+          className="scroll-mt-32 bg-[#FAF8FC] px-5 py-20 md:px-10 md:py-28 lg:px-16"
         >
           <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.55fr_1.45fr] md:gap-20">
             <div>
-              <p className="text-sm font-semibold text-[#A7C9DE]">06</p>
+              <p className="text-sm font-semibold text-[#B89DCC]">06</p>
 
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-5xl">
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-5xl">
                 System Modernisation & Cloud Accounting
               </h2>
             </div>
@@ -335,7 +335,7 @@ export default function ServicesPage() {
 
       {/* CONTACT CTA */}
       <section className="px-5 py-20 md:px-10 md:py-24 lg:px-16">
-        <div className="mx-auto max-w-7xl rounded-[28px] bg-gradient-to-br from-[#123B5D] via-[#245E86] to-[#79AFCF] px-6 py-12 md:px-12 md:py-16">
+        <div className="mx-auto max-w-7xl rounded-[28px] bg-gradient-to-br from-[#4B286D] via-[#245E86] to-[#79AFCF] px-6 py-12 md:px-12 md:py-16">
           <div className="grid gap-8 md:grid-cols-2 md:items-end">
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-white/65">

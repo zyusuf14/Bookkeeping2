@@ -93,17 +93,17 @@ function ServiceCard({
           : "translate-x-16 translate-y-8 opacity-0"
       }`}
     >
-      <div className="group w-full overflow-hidden rounded-[26px] border border-[#DCE7EE] bg-[#F7FAFC] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-[#9FC1D6] md:w-[78%] md:p-10 lg:w-[68%]">
+      <div className="group w-full overflow-hidden rounded-[26px] border border-[#E9DFEE] bg-[#FAF8FC] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-[#9FC1D6] md:w-[78%] md:p-10 lg:w-[68%]">
 
         <div className="flex items-start justify-between gap-6">
-          <p className="text-sm font-semibold tracking-[0.15em] text-[#4F8EB8]">
+          <p className="text-sm font-semibold tracking-[0.15em] text-[#70459A]">
             {service.number}
           </p>
 
-          <span className="h-3 w-3 rounded-full bg-[#B8D4E5] transition-transform duration-500 group-hover:scale-[1.6]" />
+          <span className="h-3 w-3 rounded-full bg-[#7950A0] transition-transform duration-500 group-hover:scale-[1.6]" />
         </div>
 
-        <h3 className="mt-8 max-w-2xl text-3xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-4xl lg:text-5xl">
+        <h3 className="mt-8 max-w-2xl text-3xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-4xl lg:text-5xl">
           {service.title}
         </h3>
 
@@ -113,7 +113,7 @@ function ServiceCard({
 
         <a
           href={service.href}
-          className="mt-8 inline-flex items-center gap-3 border-b border-[#123B5D] pb-1 text-sm font-semibold text-[#123B5D]"
+          className="mt-8 inline-flex items-center gap-3 border-b border-[#4B286D] pb-1 text-sm font-semibold text-[#4B286D]"
         >
           Learn more
           <span className="transition-transform duration-300 group-hover:translate-x-2">
@@ -157,11 +157,11 @@ export default function ServicesPreview() {
 
         {/* HEADING */}
         <div className="mb-14 md:mb-20">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
             What we do
           </p>
 
-          <h2 className="text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-6xl">
+          <h2 className="text-4xl font-semibold tracking-[-0.04em] text-[#4B286D] md:text-6xl">
             Our Services
           </h2>
 
@@ -186,7 +186,7 @@ export default function ServicesPreview() {
         <div className="mt-14 flex justify-center md:justify-end">
           <a
             href="/services"
-            className="group inline-flex items-center gap-3 text-sm font-semibold text-[#123B5D]"
+            className="group inline-flex items-center gap-3 text-sm font-semibold text-[#4B286D]"
           >
             View all services
             <span className="transition-transform duration-300 group-hover:translate-x-2">

@@ -27,19 +27,19 @@ export default function Header() {
         >
           <div className="flex flex-col gap-1.5">
             <span
-              className={`h-[2px] w-7 bg-[#123B5D] transition-all duration-300 ${
+              className={`h-[2px] w-7 bg-[#4B286D] transition-all duration-300 ${
                 menuOpen ? "translate-y-[8px] rotate-45" : ""
               }`}
             />
 
             <span
-              className={`h-[2px] w-7 bg-[#123B5D] transition-all duration-300 ${
+              className={`h-[2px] w-7 bg-[#4B286D] transition-all duration-300 ${
                 menuOpen ? "opacity-0" : ""
               }`}
             />
 
             <span
-              className={`h-[2px] w-7 bg-[#123B5D] transition-all duration-300 ${
+              className={`h-[2px] w-7 bg-[#4B286D] transition-all duration-300 ${
                 menuOpen ? "-translate-y-[8px] -rotate-45" : ""
               }`}
             />
@@ -62,7 +62,7 @@ export default function Header() {
             <a
               href="/"
               onClick={() => setMenuOpen(false)}
-              className="border-b border-slate-200 py-4 text-2xl font-semibold tracking-[-0.03em] text-[#123B5D] transition-all hover:pl-2 md:text-3xl"
+              className="border-b border-slate-200 py-4 text-2xl font-semibold tracking-[-0.03em] text-[#4B286D] transition-all hover:pl-2 md:text-3xl"
             >
               Home
             </a>
@@ -70,7 +70,7 @@ export default function Header() {
             <a
               href="/about"
               onClick={() => setMenuOpen(false)}
-              className="border-b border-slate-200 py-4 text-2xl font-semibold tracking-[-0.03em] text-[#123B5D] transition-all hover:pl-2 md:text-3xl"
+              className="border-b border-slate-200 py-4 text-2xl font-semibold tracking-[-0.03em] text-[#4B286D] transition-all hover:pl-2 md:text-3xl"
             >
               About Us
             </a>
@@ -78,14 +78,14 @@ export default function Header() {
             <a
               href="/services"
               onClick={() => setMenuOpen(false)}
-              className="border-b border-slate-200 py-4 text-2xl font-semibold tracking-[-0.03em] text-[#123B5D] transition-all hover:pl-2 md:text-3xl"
+              className="border-b border-slate-200 py-4 text-2xl font-semibold tracking-[-0.03em] text-[#4B286D] transition-all hover:pl-2 md:text-3xl"
             >
               Our Services
             </a>
             <a
               href="/contact"
               onClick={() => setMenuOpen(false)}
-              className="py-4 text-2xl font-semibold tracking-[-0.03em] text-[#123B5D] transition-all hover:pl-2 md:text-3xl"
+              className="py-4 text-2xl font-semibold tracking-[-0.03em] text-[#4B286D] transition-all hover:pl-2 md:text-3xl"
             >
               Contact
             </a>

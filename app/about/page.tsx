@@ -6,13 +6,13 @@ export default function AboutPage() {
       <Header />
 
       {/* HERO */}
-      <section className="mt-[88px] bg-[#F7FAFC] px-5 py-20 md:mt-[105px] md:px-10 md:py-28 lg:px-16">
+      <section className="mt-[88px] bg-[#FAF8FC] px-5 py-20 md:mt-[105px] md:px-10 md:py-28 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
             About Us
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] text-[#123B5D] md:text-7xl">
+          <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.04em] text-[#4B286D] md:text-7xl">
             Modern accounting, built around you.
           </h1>
 
@@ -39,11 +39,11 @@ export default function AboutPage() {
 </div>
           {/* LEFT */}
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#4F8EB8]">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#70459A]">
               Established 2021
             </p>
 
-            <h2 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#123B5D] md:text-5xl">
+            <h2 className="mt-5 text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#4B286D] md:text-5xl">
               Financial support with clarity and care.
             </h2>
           </div>
@@ -77,17 +77,17 @@ export default function AboutPage() {
       </section>
 
       {/* VALUES */}
-      <section className="bg-[#F7FAFC] px-5 py-20 md:px-10 md:py-24 lg:px-16">
+      <section className="bg-[#FAF8FC] px-5 py-20 md:px-10 md:py-24 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-12 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
+          <p className="mb-12 text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
             What matters to us
           </p>
  
           <div className="grid gap-8 md:grid-cols-3">
             
-            <div className="border-t border-[#BFD4E1] pt-6">
-              <p className="text-sm font-semibold text-[#4F8EB8]">01</p>
-              <h3 className="mt-4 text-2xl font-semibold text-[#123B5D]">
+            <div className="border-t border-[#D7C5E2] pt-6">
+              <p className="text-sm font-semibold text-[#70459A]">01</p>
+              <h3 className="mt-4 text-2xl font-semibold text-[#4B286D]">
                 Personal service
               </h3>
               <p className="mt-4 text-sm leading-7 text-[#64717A]">
@@ -96,9 +96,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="border-t border-[#BFD4E1] pt-6">
-              <p className="text-sm font-semibold text-[#4F8EB8]">02</p>
-              <h3 className="mt-4 text-2xl font-semibold text-[#123B5D]">
+            <div className="border-t border-[#D7C5E2] pt-6">
+              <p className="text-sm font-semibold text-[#70459A]">02</p>
+              <h3 className="mt-4 text-2xl font-semibold text-[#4B286D]">
                 Professional standards
               </h3>
               <p className="mt-4 text-sm leading-7 text-[#64717A]">
@@ -107,9 +107,9 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="border-t border-[#BFD4E1] pt-6">
-              <p className="text-sm font-semibold text-[#4F8EB8]">03</p>
-              <h3 className="mt-4 text-2xl font-semibold text-[#123B5D]">
+            <div className="border-t border-[#D7C5E2] pt-6">
+              <p className="text-sm font-semibold text-[#70459A]">03</p>
+              <h3 className="mt-4 text-2xl font-semibold text-[#4B286D]">
                 Modern approach
               </h3>
               <p className="mt-4 text-sm leading-7 text-[#64717A]">
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
       {/* FINAL CTA */}
       <section className="px-5 py-20 md:px-10 md:py-24 lg:px-16">
-        <div className="mx-auto max-w-7xl rounded-[28px] bg-gradient-to-br from-[#123B5D] via-[#245E86] to-[#79AFCF] px-6 py-12 md:px-12 md:py-16">
+        <div className="mx-auto max-w-7xl rounded-[28px] bg-gradient-to-br from-[#4B286D] via-[#245E86] to-[#79AFCF] px-6 py-12 md:px-12 md:py-16">
           <div className="grid gap-8 md:grid-cols-2 md:items-end">
             <div>
               <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-white/65">

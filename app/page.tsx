@@ -20,7 +20,7 @@ export default function Home() {
         />
 
         {/* BLUE IMAGE OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#123B5D]/85 via-[#123B5D]/45 to-transparent md:from-[#123B5D]/80 md:via-[#123B5D]/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#4B286D]/85 via-[#4B286D]/45 to-transparent md:from-[#4B286D]/80 md:via-[#4B286D]/35" />
 
         {/* HERO CONTENT */}
         <div className="relative z-10 flex min-h-[calc(100vh-88px)] items-end px-5 pb-12 pt-20 md:min-h-[calc(100vh-105px)] md:px-10 md:pb-20 lg:px-16">
@@ -70,11 +70,11 @@ export default function Home() {
       {/* TEXT */}
       <div className="order-1 md:order-2">
 
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
           Why us
         </p>
 
-        <h2 className="max-w-xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#123B5D] md:text-5xl lg:text-6xl">
+        <h2 className="max-w-xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#4B286D] md:text-5xl lg:text-6xl">
           Why The Bookkeeping Corporation?
         </h2>
 
@@ -91,7 +91,7 @@ export default function Home() {
 
         <a
           href="/about"
-          className="mt-8 inline-flex items-center gap-3 border-b border-[#123B5D] pb-1 text-sm font-semibold text-[#123B5D] transition-all duration-300 hover:gap-5"
+          className="mt-8 inline-flex items-center gap-3 border-b border-[#4B286D] pb-1 text-sm font-semibold text-[#4B286D] transition-all duration-300 hover:gap-5"
         >
           Discover more about us
           <span>→</span>
@@ -105,7 +105,7 @@ export default function Home() {
 </section>
 {/* CONTACT CTA */}
 <section className="bg-white px-5 pb-20 pt-6 md:px-10 md:pb-28 md:pt-10 lg:px-16">
-  <div className="mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-gradient-to-br from-[#123B5D] via-[#245E86] to-[#79AFCF] px-6 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20">
+  <div className="mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-gradient-to-br from-[#4B286D] via-[#245E86] to-[#79AFCF] px-6 py-12 md:px-12 md:py-16 lg:px-16 lg:py-20">
 
     <div className="grid gap-12 md:grid-cols-2 md:items-end">
 
@@ -168,24 +168,24 @@ export default function Home() {
 
       {/* NAVIGATION */}
       <div>
-        <h3 className="text-sm font-semibold text-[#123B5D]">
+        <h3 className="text-sm font-semibold text-[#4B286D]">
           Navigation
         </h3>
 
         <div className="mt-5 flex flex-col gap-3 text-sm text-slate-500">
-          <a href="/" className="transition-colors hover:text-[#123B5D]">
+          <a href="/" className="transition-colors hover:text-[#4B286D]">
             Home
           </a>
 
-          <a href="/services" className="transition-colors hover:text-[#123B5D]">
+          <a href="/services" className="transition-colors hover:text-[#4B286D]">
             Services
           </a>
 
-          <a href="/about" className="transition-colors hover:text-[#123B5D]">
+          <a href="/about" className="transition-colors hover:text-[#4B286D]">
             About Us
           </a>
 
-          <a href="/contact" className="transition-colors hover:text-[#123B5D]">
+          <a href="/contact" className="transition-colors hover:text-[#4B286D]">
             Contact
           </a>
         </div>
@@ -193,21 +193,21 @@ export default function Home() {
 
       {/* LEGAL */}
       <div>
-        <h3 className="text-sm font-semibold text-[#123B5D]">
+        <h3 className="text-sm font-semibold text-[#4B286D]">
           Legal
         </h3>
 
         <div className="mt-5 flex flex-col gap-3 text-sm text-slate-500">
           <a
             href="/terms"
-            className="transition-colors hover:text-[#123B5D]"
+            className="transition-colors hover:text-[#4B286D]"
           >
             Terms & Conditions
           </a>
 
           <a
             href="/privacy"
-            className="transition-colors hover:text-[#123B5D]"
+            className="transition-colors hover:text-[#4B286D]"
           >
             Privacy Policy
           </a>
@@ -216,14 +216,14 @@ export default function Home() {
 
       {/* CONTACT */}
       <div>
-        <h3 className="text-sm font-semibold text-[#123B5D]">
+        <h3 className="text-sm font-semibold text-[#4B286D]">
           Contact
         </h3>
 
         <div className="mt-5 flex flex-col gap-3 text-sm text-slate-500">
           <a
             href="mailto:info@thebookkeepingcorporation.com"
-            className="break-all transition-colors hover:text-[#123B5D]"
+            className="break-all transition-colors hover:text-[#4B286D]"
           >
             info@thebookkeepingcorporation.com
           </a>

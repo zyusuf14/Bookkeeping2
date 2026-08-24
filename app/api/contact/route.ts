@@ -35,7 +35,7 @@ export async function POST(request: Request) {
 
       html: `
         <div style="font-family: Arial, sans-serif; color: #1f2937; line-height: 1.6;">
-          <h2 style="color: #123B5D;">
+          <h2 style="color: #4B286D;">
             New Website Enquiry
           </h2>
 
