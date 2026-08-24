@@ -25,6 +25,20 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* DECORATIVE WAVE */}
+      <div className="service-wave service-wave-one" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+
       {/* 01 ANNUAL ACCOUNTS */}
       <Reveal>
         <section
@@ -198,13 +212,17 @@ export default function ServicesPage() {
                   "Corporate Tax",
                   "Personal Tax",
                   "VAT & Indirect Taxes",
-                ].map((item) => (
-                  <div
+                ].map((item, index) => (
+                  <Reveal
                     key={item}
-                    className="rounded-2xl border border-[#DCE8EF] bg-white p-5"
+                    direction={index % 2 === 0 ? "left" : "right"}
                   >
-                    <h3 className="font-semibold text-[#123B5D]">{item}</h3>
-                  </div>
+                    <div className="h-full rounded-2xl border border-[#DCE8EF] bg-white p-5">
+                      <h3 className="font-semibold text-[#123B5D]">
+                        {item}
+                      </h3>
+                    </div>
+                  </Reveal>
                 ))}
               </div>
             </div>
@@ -235,26 +253,34 @@ export default function ServicesPage() {
               </p>
 
               <div className="mt-8 grid gap-6 md:grid-cols-2">
-                <div className="rounded-2xl bg-[#F4F8FB] p-6">
-                  <h3 className="text-xl font-semibold text-[#123B5D]">
-                    Onsite Bookkeeping
-                  </h3>
-                  <p className="mt-4 leading-7 text-[#66737C]">
-                    Support provided directly at your business location,
-                    allowing closer integration with your day-to-day financial
-                    operations.
-                  </p>
-                </div>
+                {/* ONSITE — LEFT */}
+                <Reveal direction="left">
+                  <div className="h-full rounded-2xl bg-[#F4F8FB] p-6">
+                    <h3 className="text-xl font-semibold text-[#123B5D]">
+                      Onsite Bookkeeping
+                    </h3>
 
-                <div className="rounded-2xl bg-[#F4F8FB] p-6">
-                  <h3 className="text-xl font-semibold text-[#123B5D]">
-                    Offsite Bookkeeping
-                  </h3>
-                  <p className="mt-4 leading-7 text-[#66737C]">
-                    Secure remote bookkeeping using cloud-based accounting
-                    systems with regular communication and up-to-date records.
-                  </p>
-                </div>
+                    <p className="mt-4 leading-7 text-[#66737C]">
+                      Support provided directly at your business location,
+                      allowing closer integration with your day-to-day
+                      financial operations.
+                    </p>
+                  </div>
+                </Reveal>
+
+                {/* OFFSITE — RIGHT */}
+                <Reveal direction="right">
+                  <div className="h-full rounded-2xl bg-[#F4F8FB] p-6">
+                    <h3 className="text-xl font-semibold text-[#123B5D]">
+                      Offsite Bookkeeping
+                    </h3>
+
+                    <p className="mt-4 leading-7 text-[#66737C]">
+                      Secure remote bookkeeping using cloud-based accounting
+                      systems with regular communication and up-to-date records.
+                    </p>
+                  </div>
+                </Reveal>
               </div>
 
               <p className="mt-8 text-base leading-8 text-[#66737C]">

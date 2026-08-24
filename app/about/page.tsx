@@ -27,7 +27,16 @@ export default function AboutPage() {
       {/* MAIN ABOUT */}
       <section className="px-5 py-20 md:px-10 md:py-28 lg:px-16">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
-          
+       <div className="service-wave service-wave-one" aria-hidden="true">
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+</div>
           {/* LEFT */}
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#4F8EB8]">
@@ -52,7 +61,6 @@ export default function AboutPage() {
               payroll, tax advice and HMRC compliance, combining professional
               expertise with modern accounting technology.
             </p>
-
             <p>
               Our team is committed to helping clients maintain accurate
               financial records, navigate complex tax regulations and improve
@@ -74,7 +82,7 @@ export default function AboutPage() {
           <p className="mb-12 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
             What matters to us
           </p>
-
+ 
           <div className="grid gap-8 md:grid-cols-3">
             
             <div className="border-t border-[#BFD4E1] pt-6">

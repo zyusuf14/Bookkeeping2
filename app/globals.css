@@ -24,3 +24,256 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Our Services flowing background */
+
+/* =========================
+   SERVICES FLOWING LINES
+========================= */
+
+/* =========================
+   SERVICES FLOWING LINES
+========================= */
+
+.services-wave-bg {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.services-wave-bg > .relative {
+  position: relative;
+  z-index: 2;
+}
+
+.service-wave {
+  position: absolute;
+  z-index: 0;
+  width: 130%;
+  height: 420px;
+  left: -15%;
+  pointer-events: none;
+}
+
+/* Cluster around cards 1–2 */
+.service-wave-one {
+  top: 16%;
+  transform: rotate(-8deg);
+}
+
+/* Cluster around cards 5–6 */
+.service-wave-two {
+  top: 72%;
+  transform: rotate(8deg) scaleX(-1);
+}
+
+/* Individual strands */
+.service-wave span {
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+  height: 250px;
+
+  border-radius: 50%;
+
+  border-top: 3px solid rgba(18, 59, 93, 0.68);
+
+  transform: skewX(-20deg);
+}
+
+/* Tighter, denser strand bundle */
+
+.service-wave span:nth-child(1) {
+  top: 0;
+  opacity: 0.32;
+}
+
+.service-wave span:nth-child(2) {
+  top: 9px;
+  opacity: 0.42;
+}
+
+.service-wave span:nth-child(3) {
+  top: 18px;
+  opacity: 0.5;
+}
+
+.service-wave span:nth-child(4) {
+  top: 27px;
+  opacity: 0.58;
+}
+
+.service-wave span:nth-child(5) {
+  top: 36px;
+  border-top-width: 4px;
+  opacity: 0.68;
+}
+
+.service-wave span:nth-child(6) {
+  top: 46px;
+  border-top-width: 4px;
+  opacity: 0.76;
+}
+
+/* Extra strands */
+.service-wave span:nth-child(7) {
+  top: 57px;
+  opacity: 0.62;
+}
+
+.service-wave span:nth-child(8) {
+  top: 68px;
+  opacity: 0.5;
+}
+
+.service-wave span:nth-child(9) {
+  top: 79px;
+  opacity: 0.4;
+}
+
+.service-wave span:nth-child(10) {
+  top: 90px;
+  opacity: 0.3;
+}
+
+/* Very subtle depth only — no big blur */
+.service-wave::after {
+  content: "";
+  position: absolute;
+
+  width: 70%;
+  height: 95px;
+
+  left: 15%;
+  top: 70px;
+
+  background: rgba(18, 59, 93, 0.07);
+
+  border-radius: 50%;
+
+  filter: blur(18px);
+
+  transform: rotate(-5deg);
+}
+
+/* Make second cluster a little stronger */
+.service-wave-two span {
+  border-top-color: rgba(13, 48, 78, 0.72);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .service-wave {
+    width: 165%;
+    left: -32%;
+    height: 340px;
+  }
+
+  .service-wave-one {
+    top: 17%;
+  }
+
+  .service-wave-two {
+    top: 74%;
+  }
+
+  .service-wave span {
+    height: 190px;
+    border-top-width: 2.5px;
+  }
+
+  .service-wave span:nth-child(1) {
+    top: 0;
+  }
+
+  .service-wave span:nth-child(2) {
+    top: 7px;
+  }
+
+  .service-wave span:nth-child(3) {
+    top: 14px;
+  }
+
+  .service-wave span:nth-child(4) {
+    top: 21px;
+  }
+
+  .service-wave span:nth-child(5) {
+    top: 28px;
+  }
+
+  .service-wave span:nth-child(6) {
+    top: 35px;
+  }
+
+  .service-wave span:nth-child(7) {
+    top: 42px;
+  }
+
+  .service-wave span:nth-child(8) {
+    top: 49px;
+  }
+
+  .service-wave span:nth-child(9) {
+    top: 56px;
+  }
+
+  .service-wave span:nth-child(10) {
+    top: 63px;
+  }
+}
+/* ABOUT PAGE MERGING WAVE */
+
+.about-flow-wave {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: white;
+  pointer-events: none;
+}
+
+.about-flow-wave svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-flow-wave {
+    height: 155px;
+  }
+}
+/* ABOUT PAGE FULL-WIDTH WAVE */
+
+.about-wave-wrap {
+  position: relative;
+  width: 100%;
+  height: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-wave-svg {
+  position: absolute;
+
+  width: 100vw;
+  height: 220px;
+
+  left: 50%;
+  top: -110px;
+
+  transform: translateX(-50%);
+
+  display: block;
+  overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .about-wave-svg {
+    height: 150px;
+    top: -75px;
+  }
+}

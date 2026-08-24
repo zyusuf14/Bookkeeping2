@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const services = [
   {
@@ -47,15 +47,116 @@ const services = [
   },
 ];
 
-export default function ServicesPreview() {
-  const [activeService, setActiveService] = useState(0);
+function ServiceCard({
+  service,
+  index,
+}: {
+  service: (typeof services)[number];
+  index: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
 
-  const active = services[activeService];
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const fromLeft = index % 2 === 0;
 
   return (
-    <section id="services" className="bg-white px-5 py-20 md:px-10 md:py-28 lg:px-16">
+    <div
+      ref={ref}
+      className={`flex transition-all duration-1000 ease-out ${
+        fromLeft ? "justify-start" : "justify-end"
+      } ${
+        visible
+          ? "translate-x-0 translate-y-0 opacity-100"
+          : fromLeft
+          ? "-translate-x-16 translate-y-8 opacity-0"
+          : "translate-x-16 translate-y-8 opacity-0"
+      }`}
+    >
+      <div className="group w-full overflow-hidden rounded-[26px] border border-[#DCE7EE] bg-[#F7FAFC] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-[#9FC1D6] md:w-[78%] md:p-10 lg:w-[68%]">
+
+        <div className="flex items-start justify-between gap-6">
+          <p className="text-sm font-semibold tracking-[0.15em] text-[#4F8EB8]">
+            {service.number}
+          </p>
+
+          <span className="h-3 w-3 rounded-full bg-[#B8D4E5] transition-transform duration-500 group-hover:scale-[1.6]" />
+        </div>
+
+        <h3 className="mt-8 max-w-2xl text-3xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-4xl lg:text-5xl">
+          {service.title}
+        </h3>
+
+        <p className="mt-5 max-w-xl text-base leading-7 text-[#66737C] md:text-lg md:leading-8">
+          {service.short}
+        </p>
+
+        <a
+          href={service.href}
+          className="mt-8 inline-flex items-center gap-3 border-b border-[#123B5D] pb-1 text-sm font-semibold text-[#123B5D]"
+        >
+          Learn more
+          <span className="transition-transform duration-300 group-hover:translate-x-2">
+            →
+          </span>
+        </a>
+      </div>
+    </div>
+  );
+}
+
+export default function ServicesPreview() {
+  return (
+    <section
+      id="services"
+      className="services-wave-bg relative overflow-hidden bg-white px-5 py-20 md:px-10 md:py-28 lg:px-16"
+    >
+        {/* Decorative flowing lines */}
+<div className="service-wave service-wave-one" aria-hidden="true">
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+</div>
+
+<div className="service-wave service-wave-two" aria-hidden="true">
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+</div>
       <div className="mx-auto max-w-7xl">
-        <div className="mb-12 md:mb-16">
+
+        {/* HEADING */}
+        <div className="mb-14 md:mb-20">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#4F8EB8]">
             What we do
           </p>
@@ -63,89 +164,37 @@ export default function ServicesPreview() {
           <h2 className="text-4xl font-semibold tracking-[-0.04em] text-[#123B5D] md:text-6xl">
             Our Services
           </h2>
+
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[#66737C] md:text-lg">
+            Reliable financial support designed around the needs of businesses
+            and individuals.
+          </p>
         </div>
 
-        <div className="overflow-hidden rounded-[28px] bg-[#F4F8FB] md:grid md:grid-cols-[180px_1fr]">
-          
-          {/* LEFT SELECTOR */}
-          <div className="flex overflow-x-auto border-b border-[#DCE7EE] bg-white md:flex-col md:border-b-0 md:border-r">
-            {services.map((service, index) => {
-              const isActive = activeService === index;
-
-              return (
-                <button
-                  key={service.title}
-                  onClick={() => setActiveService(index)}
-                  className={`group flex min-w-[90px] flex-1 items-center justify-center border-r border-[#E6EDF2] px-4 py-5 transition-all duration-300 last:border-r-0 md:min-w-0 md:border-b md:border-r-0 md:px-6 md:py-7 md:last:border-b-0 ${
-                    isActive ? "bg-[#123B5D] text-white" : "bg-white text-[#123B5D]"
-                  }`}
-                >
-                  <div className="flex flex-col items-center gap-2">
-                    <span
-                      className={`text-xs font-medium tracking-[0.15em] ${
-                        isActive ? "text-white/70" : "text-[#6EA4C7]"
-                      }`}
-                    >
-                      {service.number}
-                    </span>
-
-                    <span
-                      className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
-                        isActive
-                          ? "scale-125 bg-[#A9D0E8]"
-                          : "bg-[#D8E8F2] group-hover:bg-[#8EB7D2]"
-                      }`}
-                    />
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* ACTIVE SERVICE CONTENT */}
-          <div className="relative min-h-[430px] overflow-hidden px-6 py-10 md:min-h-[520px] md:px-14 md:py-14 lg:px-16">
-            
-            {/* DECORATIVE SHAPE */}
-            <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full border-[42px] border-[#E6F1F7]" />
-            <div className="pointer-events-none absolute bottom-[-90px] right-[80px] h-56 w-56 rounded-full border-[38px] border-[#EDF5F9]" />
-
-            <div className="relative z-10 flex h-full flex-col justify-between">
-              <div>
-                <p className="mb-5 text-sm font-semibold tracking-[0.18em] text-[#6EA4C7]">
-                  {active.number}
-                </p>
-
-                <h3 className="max-w-2xl text-3xl font-semibold tracking-[-0.035em] text-[#15191D] md:text-5xl">
-                  {active.title}
-                </h3>
-
-                <p className="mt-7 max-w-2xl text-base leading-7 text-[#53616B] md:text-lg md:leading-8">
-                  {active.short}
-                </p>
-              </div>
-
-              <div className="mt-14">
-                <a
-                  href={active.href}
-                  className="inline-flex items-center gap-3 border-b border-[#123B5D] pb-1 text-sm font-semibold text-[#123B5D] transition-all duration-300 hover:gap-5"
-                >
-                  Learn more
-                  <span>→</span>
-                </a>
-              </div>
-            </div>
-          </div>
+        {/* SERVICE CARDS */}
+        <div className="space-y-8 md:space-y-10">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={service.title}
+              service={service}
+              index={index}
+            />
+          ))}
         </div>
 
-        <div className="mt-8 flex justify-end">
+        {/* VIEW ALL */}
+        <div className="mt-14 flex justify-center md:justify-end">
           <a
             href="/services"
-            className="inline-flex items-center gap-3 text-sm font-semibold text-[#123B5D] transition-all duration-300 hover:gap-5"
+            className="group inline-flex items-center gap-3 text-sm font-semibold text-[#123B5D]"
           >
             View all services
-            <span>→</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-2">
+              →
+            </span>
           </a>
         </div>
+
       </div>
     </section>
   );
