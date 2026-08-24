@@ -1,12 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
+
+type RevealProps = {
+  children: ReactNode;
+  direction?: "left" | "right" | "up";
+};
 
 export default function Reveal({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+  direction = "up",
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -19,7 +23,7 @@ export default function Reveal({
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-          observer.unobserve(element);
+          observer.unobserve(entry.target);
         }
       },
       {
@@ -32,13 +36,20 @@ export default function Reveal({
     return () => observer.disconnect();
   }, []);
 
+  const hiddenPosition =
+    direction === "left"
+      ? "-translate-x-20"
+      : direction === "right"
+      ? "translate-x-20"
+      : "translate-y-12";
+
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
+      className={`transition-all duration-1000 ease-out ${
         visible
-          ? "translate-y-0 opacity-100"
-          : "translate-y-10 opacity-0"
+          ? "translate-x-0 translate-y-0 opacity-100"
+          : `${hiddenPosition} opacity-0`
       }`}
     >
       {children}
