@@ -32,6 +32,8 @@ export default function LogoBanner() {
   </div>
 ))}
 
+
+
         {/* Duplicate set so scrolling is seamless */}
         {logos.map((logo, index) => (
   <div className="logo-item" key={`second-${index}`}>
