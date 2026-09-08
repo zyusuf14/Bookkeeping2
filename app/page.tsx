@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import ServicesPreview from "@/components/ServicesPreview";
+import LogoBanner from "@/components/LogoBanner";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-950">
@@ -50,7 +51,26 @@ export default function Home() {
           </div>
         </div>
 
+       
+
       </section>
+
+{/* WHO WE WORK WITH */}
+<section className="bg-white px-5 pt-20 md:px-10 md:pt-28 lg:px-16">
+  <div className="mx-auto max-w-7xl">
+
+    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#70459A]">
+      OUR CLIENTS
+    </p>
+
+    <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#4B286D] md:text-5xl lg:text-6xl">
+      Who We Work With
+    </h2>
+
+  </div>
+</section>
+
+  <LogoBanner />
 <ServicesPreview />
 {/* WHY US */}
 <section className="bg-white px-5 py-20 md:px-10 md:py-28 lg:px-16">

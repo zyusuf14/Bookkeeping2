@@ -280,3 +280,45 @@ body {
     top: -75px;
   }
 }
+
+.logo-banner {
+  width: 100%;
+  overflow: hidden;
+  padding: 35px 0;
+  background: #f8f6f9;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: logoScroll 25s linear infinite;
+}
+
+.logo-item {
+  width: 220px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: auto;
+  height: 55px;
+  object-fit: contain;
+}
+
+@keyframes logoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+.logo-image-large {
+  height: 85px;
+}
