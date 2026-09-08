@@ -304,21 +304,20 @@ body {
   width: 220px;
   height: 90px;
   flex: 0 0 220px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-image {
+  display: block;
   width: auto;
   max-width: 160px;
   height: 55px;
   object-fit: contain;
 }
 
-/* Make logo 6 larger */
-.logo-item:nth-child(9n + 6) .logo-image {
+.logo-image-large {
   height: 80px;
   max-width: 190px;
 }

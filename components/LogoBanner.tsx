@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const logos = [
   "/logos/logo_1.png",
   "/logos/logo_2.png",
@@ -19,35 +17,29 @@ export default function LogoBanner() {
 
         {/* First set */}
         {logos.map((logo, index) => (
-  <div className="logo-item" key={`first-${index}`}>
-    <Image
-      src={logo}
-      alt={`Logo ${index + 1}`}
-      width={160}
-      height={80}
-      className={`logo-image ${
-        logo === "/logos/logo_6_.png" ? "logo-image-large" : ""
-      }`}
-    />
-  </div>
-))}
+          <div className="logo-item" key={`first-${index}`}>
+            <img
+              src={logo}
+              alt={`Client logo ${index + 1}`}
+              className={`logo-image ${
+                logo === "/logos/logo_6_.png" ? "logo-image-large" : ""
+              }`}
+            />
+          </div>
+        ))}
 
-
-
-        {/* Duplicate set so scrolling is seamless */}
+        {/* Duplicate set */}
         {logos.map((logo, index) => (
-  <div className="logo-item" key={`second-${index}`}>
-    <Image
-      src={logo}
-      alt=""
-      width={160}
-      height={80}
-      className={`logo-image ${
-        logo === "/logos/logo_6_.png" ? "logo-image-large" : ""
-      }`}
-    />
-  </div>
-))}
+          <div className="logo-item" key={`second-${index}`}>
+            <img
+              src={logo}
+              alt=""
+              className={`logo-image ${
+                logo === "/logos/logo_6_.png" ? "logo-image-large" : ""
+              }`}
+            />
+          </div>
+        ))}
 
       </div>
     </section>
