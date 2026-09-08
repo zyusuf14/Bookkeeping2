@@ -281,6 +281,10 @@ body {
   }
 }
 
+/* ========================================
+   SCROLLING LOGO BANNER
+======================================== */
+
 .logo-banner {
   width: 100%;
   overflow: hidden;
@@ -292,12 +296,14 @@ body {
   display: flex;
   align-items: center;
   width: max-content;
-  animation: logoScroll 25s linear infinite;
+  animation: logoScroll 28s linear infinite;
+  will-change: transform;
 }
 
 .logo-item {
   width: 220px;
-  flex-shrink: 0;
+  height: 90px;
+  flex: 0 0 220px;
 
   display: flex;
   justify-content: center;
@@ -306,19 +312,23 @@ body {
 
 .logo-image {
   width: auto;
+  max-width: 160px;
   height: 55px;
   object-fit: contain;
 }
 
+/* Make logo 6 larger */
+.logo-item:nth-child(9n + 6) .logo-image {
+  height: 80px;
+  max-width: 190px;
+}
+
 @keyframes logoScroll {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-1980px, 0, 0);
   }
-}
-.logo-image-large {
-  height: 85px;
 }
