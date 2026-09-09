@@ -16,39 +16,23 @@ export default function LogoBanner() {
   return (
     <section className="logo-banner">
       <div className="logo-track">
-
-        <div className="logo-set">
-          {logos.map((logo, index) => (
-            <div className="logo-item" key={`first-${index}`}>
-              <img
-                src={logo}
-                alt={`Client logo ${index + 1}`}
-                className={`logo-image ${
-                  logo === "/logos/logo_6_.png"
-                    ? "logo-image-large"
-                    : ""
-                }`}
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className="logo-set" aria-hidden="true">
-          {logos.map((logo, index) => (
-            <div className="logo-item" key={`second-${index}`}>
-              <img
-                src={logo}
-                alt=""
-                className={`logo-image ${
-                  logo === "/logos/logo_6_.png"
-                    ? "logo-image-large"
-                    : ""
-                }`}
-              />
-            </div>
-          ))}
-        </div>
-
+        {[0, 1, 2].map((setIndex) => (
+          <div className="logo-set" key={setIndex} aria-hidden={setIndex !== 0}>
+            {logos.map((logo, index) => (
+              <div className="logo-item" key={`${setIndex}-${index}`}>
+                <img
+                  src={logo}
+                  alt={setIndex === 0 ? `Client logo ${index + 1}` : ""}
+                  className={`logo-image ${
+                    logo === "/logos/logo_6_.png"
+                      ? "logo-image-large"
+                      : ""
+                  }`}
+                />
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     </section>
   );
