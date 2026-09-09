@@ -17,31 +17,37 @@ export default function LogoBanner() {
     <section className="logo-banner">
       <div className="logo-track">
 
-        {/* First set */}
-        {logos.map((logo, index) => (
-          <div className="logo-item" key={`first-${index}`}>
-            <img
-              src={logo}
-              alt={`Client logo ${index + 1}`}
-              className={`logo-image ${
-                logo === "/logos/logo_6_.png" ? "logo-image-large" : ""
-              }`}
-            />
-          </div>
-        ))}
+        <div className="logo-set">
+          {logos.map((logo, index) => (
+            <div className="logo-item" key={`first-${index}`}>
+              <img
+                src={logo}
+                alt={`Client logo ${index + 1}`}
+                className={`logo-image ${
+                  logo === "/logos/logo_6_.png"
+                    ? "logo-image-large"
+                    : ""
+                }`}
+              />
+            </div>
+          ))}
+        </div>
 
-        {/* Duplicate set */}
-        {logos.map((logo, index) => (
-          <div className="logo-item" key={`second-${index}`}>
-            <img
-              src={logo}
-              alt=""
-              className={`logo-image ${
-                logo === "/logos/logo_6_.png" ? "logo-image-large" : ""
-              }`}
-            />
-          </div>
-        ))}
+        <div className="logo-set" aria-hidden="true">
+          {logos.map((logo, index) => (
+            <div className="logo-item" key={`second-${index}`}>
+              <img
+                src={logo}
+                alt=""
+                className={`logo-image ${
+                  logo === "/logos/logo_6_.png"
+                    ? "logo-image-large"
+                    : ""
+                }`}
+              />
+            </div>
+          ))}
+        </div>
 
       </div>
     </section>
