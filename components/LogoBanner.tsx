@@ -8,6 +8,8 @@ const logos = [
   "/logos/logo_7_.png",
   "/logos/logo_8.png",
   "/logos/logo_9.png",
+  "/logos/logo_10.png",
+  "/logos/logo_11.png",
 ];
 
 export default function LogoBanner() {
