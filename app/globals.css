@@ -19,10 +19,34 @@
   }
 }
 
+/* ========================================
+   GLOBAL
+======================================== */
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
 body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+
   background: var(--background);
   color: var(--foreground);
+
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#__next {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ========================================
@@ -32,7 +56,12 @@ body {
 .services-wave-bg {
   position: relative;
   isolation: isolate;
+
+  width: 100%;
+  max-width: 100%;
+
   overflow: hidden;
+
   background: #ffffff;
 }
 
@@ -43,28 +72,45 @@ body {
 
 .service-wave {
   position: absolute;
+
   z-index: 0;
+
   width: 130%;
+  max-width: none;
+
   height: 420px;
+
   left: -15%;
+
   pointer-events: none;
+
+  /*
+    Important:
+    prevents the oversized decorative wave
+    from creating horizontal page overflow.
+  */
+  overflow: hidden;
 }
 
 /* Cluster around cards 1–2 */
+
 .service-wave-one {
   top: 16%;
   transform: rotate(-8deg);
 }
 
 /* Cluster around cards 5–6 */
+
 .service-wave-two {
   top: 72%;
   transform: rotate(8deg) scaleX(-1);
 }
 
 /* Individual purple strands */
+
 .service-wave span {
   position: absolute;
+
   left: 0;
 
   width: 100%;
@@ -135,6 +181,7 @@ body {
 
 .service-wave::after {
   content: "";
+
   position: absolute;
 
   width: 70%;
@@ -165,8 +212,13 @@ body {
 @media (max-width: 768px) {
   .service-wave {
     width: 165%;
+    max-width: none;
+
     left: -32%;
+
     height: 340px;
+
+    overflow: hidden;
   }
 
   .service-wave-one {
@@ -228,16 +280,26 @@ body {
 ======================================== */
 
 .about-flow-wave {
+  position: relative;
+
   width: 100%;
+  max-width: 100%;
+
   height: 220px;
+
   overflow: hidden;
+
   background: white;
+
   pointer-events: none;
 }
 
 .about-flow-wave svg {
   display: block;
+
   width: 100%;
+  max-width: 100%;
+
   height: 100%;
 }
 
@@ -253,16 +315,33 @@ body {
 
 .about-wave-wrap {
   position: relative;
+
   width: 100%;
+  max-width: 100%;
+
   height: 0;
+
   z-index: 1;
+
   pointer-events: none;
+
+  /*
+    Stops the SVG from making the page
+    wider than the viewport.
+  */
+  overflow: hidden;
 }
 
 .about-wave-svg {
   position: absolute;
 
-  width: 100vw;
+  /*
+    100% is safer than 100vw here.
+    100vw can sometimes create horizontal
+    overflow because of the browser viewport.
+  */
+  width: 100%;
+
   height: 220px;
 
   left: 50%;
@@ -271,12 +350,16 @@ body {
   transform: translateX(-50%);
 
   display: block;
-  overflow: visible;
+
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
   .about-wave-svg {
+    width: 100%;
+
     height: 150px;
+
     top: -75px;
   }
 }
@@ -286,16 +369,25 @@ body {
 ======================================== */
 
 .logo-banner {
+  position: relative;
+
   width: 100%;
+  max-width: 100%;
+
   overflow: hidden;
+
   padding: 35px 0;
+
   background: #f5f2f5;
 }
 
 .logo-track {
   display: flex;
+
   width: max-content;
+
   will-change: transform;
+
   animation: logoScroll 25s linear infinite;
 }
 
@@ -307,6 +399,7 @@ body {
 .logo-item {
   width: 220px;
   height: 80px;
+
   flex-shrink: 0;
 
   display: flex;
@@ -316,9 +409,12 @@ body {
 
 .logo-image {
   display: block;
+
   width: auto;
   height: 55px;
+
   max-width: 180px;
+
   object-fit: contain;
 }
 
@@ -333,5 +429,29 @@ body {
 
   to {
     transform: translate3d(-2420px, 0, 0);
+  }
+}
+
+/* ========================================
+   EXTRA MOBILE OVERFLOW PROTECTION
+======================================== */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
   }
 }
